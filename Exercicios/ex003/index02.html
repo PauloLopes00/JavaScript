@@ -6,35 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dom parte 02</title>
     <style>
-        div.area{
-            display: block;
+        div{
+            font: normal 20pt arial;
             background: rgb(51, 206, 51);
             color: white;
             width: 200px;
             height: 200px;
-            position: relative;
-        }
-        P.area{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            display: block;
             line-height: 200px;
-            font: normal 20pt arial;
-            transform: translate(-50px, -50px);
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="area" onclick="clicar()">
-        <p class="area">interaja....</p>
+    <div class="area" >
+        interaja....
     </div>
     <script>
+        var a = window.document.querySelector('div.area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entra)
+        a.addEventListener('mouseout', sair)
+
         function clicar(){
-            var a = window.document.querySelector('div.area')
-            a.innerText = "clicou"
+            a.innerText = "clicou!"
+            a.style.background = "red"
         }
-        var click = wind
+        function entra(){
+            a.innerText = 'Entrou!'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = "green"
+        }
     </script>
 </body>
 </html>

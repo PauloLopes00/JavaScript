@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Idade</title>
+</head>
+<body>
+    <h1>Qual a sua Idade?</h1>
+    <label for="txti">Idade: </label>
+    <input type="number" name="txti" id="txti">
+    <input type="submit" value="Enviar" onclick="Enviar()">
+    <div id="res"></div>
+    <script>
+        function Enviar(){
+            var idade = document.querySelector(`input#txti`)
+            var res = document.querySelector(`div#res`)
+            var num = Number(idade.value)
+            res.innerHTML = `<p>Sua idade é ${num} anos</p>`
+            if(num < 10){
+                res.innerHTML += `<p>Você é uma Criança</p>`
+            }if(num >= 10 && num <= 17){
+                res.innerHTML += `<p>Você é um pre- adolescente</p>`
+            }if(num >=18 && num <= 29){
+                res.innerHTML += `<p>Você é um adulto</p>`
+            }if(num >=30 && num <= 39){
+                res.innerHTML += `<p>Você chegou na faze dos trintou</p>`
+            }if (num >=40){
+                res.innerHTML += `<p>Você é um idoso</p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>

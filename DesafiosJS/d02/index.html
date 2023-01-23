@@ -12,7 +12,7 @@
         <h1>Verificador de Idade</h1>
     </header>
     <main>
-        <div>
+        <div id="form">
             <p>
                 <label for="iano">Ano de Nascimento: </label>
                 <input type="number" name="ano" id="iano">
@@ -24,8 +24,15 @@
                 <input type="radio" name="sexo" id="isexo">
                 <label for="isexo">Feminino</label>
             </p>
+            <p>
+                <input type="submit" value="Verificar" onclick="verificar()">
+            </p>
+            <div id="res">
+                <p>Preencha os Dados Para Verificar!</p>
+            </div>
         </div>
     </main>
     <footer><p>Feito pelo Paulo</p></footer>
+    <script src="script.js"></script>
 </body>
 </html>

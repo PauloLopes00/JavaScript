@@ -4,8 +4,6 @@ function contar(){
     var passo = document.querySelector(`input#passoi`)
     var res = document.querySelector(`div#res`)
 
-    
-
     if(inicio.value.length == 0 || passo.value.length == 0 || fim.value.length == 0){
         res.innerHTML = `impossivel contar!`
     }else{

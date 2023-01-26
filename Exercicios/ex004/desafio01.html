@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafios</title>
+</head>
+<body>
+    <header>
+        <h1>Desafio de Nascionalidade</h1>
+    </header>
+    <main>
+        <div>
+            <p>
+                <label for="inas">Nascionalidade</label>
+                <input type="text" name="nas" id="inas">
+                <input type="button" value="Verificar" onclick="Verificar()">
+            </p>
+        </div>
+        <div id="res"></div>
+    </main>
+    <script>
+        function Verificar(){
+            let nas = document.querySelector(`input#inas`)
+            let res = document.querySelector(`div#res`)
+            //let n = String(nas.value)
+            if(String(nas.value) == "Brasil"){
+                res.innerHTML = `Você é Brasileiro`
+            }else{
+                res.innerHTML = `Você é Estrangeiro`
+            }
+            
+        }
+    </script>
+</body>
+</html>

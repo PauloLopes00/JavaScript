@@ -8,9 +8,13 @@ let produtos = [
     {id: 5, nome: 'leite', valor: 2.20, categoria: 'Alimento'}
 ]
 
-const total = produtos.reduce((acumulado, p) => acumulado.concat(p * 2), [] )
 
-console.log(total)
+let pro = [1,2,3,4,5,6,7,8,9,10]
+
+const total = pro.reduce((acumulado, p) => acumulado.concat(p * 2), [] )
+
+//console.log(total)
+
 
 
 //let numero = [1,2,3,4]

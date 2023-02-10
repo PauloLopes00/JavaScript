@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos</title>
+</head>
+<body>
+    <h1>Lista de Convidados</h1>
+    <ul id="lista"></ul>
+    <input type="text" name="text" id="itext" placeholder="Digite o Nome">
+    <button id="botao" onclick="clicar()" >Cadastra</button>
+    <script>
+        var lista = document.querySelector('ul#lista')
+        var campo = document.querySelector('input#itext')
+        var botao = document.querySelector('button#botao')
+
+        var convidados =[
+            {nome: "Bruno de Souza" },
+            {nome: "Jefferson Andrade" },
+            {nome: "Maria Silva" },
+            {nome: "Giovanni" }
+        ]
+        function botarnalista(){
+            lista.innerHTML = ""
+            for(const convidado of convidados){
+                var elconvidado = document.createElement('li')
+                var elnome = document.createTextNode(convidado.nome)
+
+                var elExcluir = document.createElement("a")
+                elExcluir.setAttribute("href","#",)
+                var elExcluirTexto = document.createTextNode("Excluir")
+                elExcluir.onclick = function(){
+                    convidados = convidados.filter(con => con.nome !== convidado.nome)
+                    botarnalista()
+                }
+                
+                elExcluir.appendChild(elExcluirTexto)
+                elconvidado.appendChild(elnome)
+                elconvidado.appendChild(elExcluir)
+                lista.appendChild(elconvidado)
+            }
+            
+        }  
+        botarnalista()  
+        function clicar(botao){
+            let nome = campo.value
+            convidados.push({nome: nome})
+            campo.value = ""
+            botarnalista()
+        }
+
+    </script>
+</body>
+</html>

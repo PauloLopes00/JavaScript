@@ -12,7 +12,7 @@ let produtos = [
     {id: 5, nome: 'Cueca',categoria: 'roupa', valor: 1.65}
 ]
 
-var produtosf = produtos.filter(item => item.categoria == 'Esporte',item => groupBy('nome'))
+var produtosf = produtos.filter(item => item.categoria == 'Esporte').map(item => item.nome)
 
 console.log(produtosf)
 
